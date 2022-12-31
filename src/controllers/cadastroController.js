@@ -10,7 +10,7 @@ class cadastroController {
         let criar = new cadastro(req.body)
         criar.save((err) => {
             if(err){
-                res.status(500).send({message: `${err.message} - Não foi possivel criar o cadastro.`})
+                res.status(500).send({message: `${err.message} - Não foi possivel criar o cadastro.`});
             }else{
                 res.status(201).send(criar.toJSON());
             }
@@ -42,7 +42,7 @@ class cadastroController {
             if(err){
                 res.status(500).send({message: `${err.message} - O cadastro não foi localizado.`});
             }else{
-                res.status(200).send(cadastro)
+                res.status(200).send(cadastro);
             }
         })
     }
